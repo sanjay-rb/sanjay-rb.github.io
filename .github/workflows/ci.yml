@@ -21,8 +21,11 @@ jobs:
         run: |
           git branch
           git checkout main
+          ls
           echo "test" > test.txt
+          git status
           git add --all
+          git status
           git commit "Added test file"
           git push orgin main 
         env:
