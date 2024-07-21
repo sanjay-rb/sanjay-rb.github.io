@@ -12,8 +12,10 @@ jobs:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.12.1
         
-      - name: Checkout Repository
+      - name: Checkout dev Branch
         uses: actions/checkout@v2
+        with:
+          ref: dev
 
       - name: Setup Java
         uses: actions/setup-java@v1
@@ -32,12 +34,28 @@ jobs:
       - name: Build Android App
         run: flutter build web --release
       
-      - name: Zip Web
+      - name: Checkout main Branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          path: main_branch
+          
+      - name: Clear main branch contents
         run: |
-          cd build
-          rm -rf web.zip
-          zip -r web.zip web
+          rm -rf main_branch/*
       
+      - name: Copy web build to main branch
+        run: |
+          cp -r build/web/* main_branch/
+          cd main_branch
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m "Update web build from dev"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
       - name: Upload apk to release
         uses: svenstaro/upload-release-action@v2
         with:
