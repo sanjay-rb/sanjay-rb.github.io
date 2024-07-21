@@ -3,16 +3,6 @@ import 'package:sanjayrb/app/data/models/profile_model.dart';
 class ProfileConstant {
   static List<ProfileModel> value = [
     ProfileModel(
-      keyword: "Date of Birth : ",
-      value: "24/04/1999",
-      link: "NA",
-    ),
-    ProfileModel(
-      keyword: "Phone Number : ",
-      value: "+91 9442212906",
-      link: "tel:+919442212906",
-    ),
-    ProfileModel(
       keyword: "Email : ",
       value: "sanjaybabu618@gmail.com",
       link: "mailto:sanjaybabu618@gmail.com",
@@ -53,14 +43,9 @@ class ProfileConstant {
       link: "https://www.instagram.com/sanju_sanjay_618/",
     ),
     ProfileModel(
-      keyword: "Twitter : ",
+      keyword: "X (Twitter) : ",
       value: "sanjayb58109784",
-      link: "https://twitter.com/sanjayb58109784",
-    ),
-    ProfileModel(
-      keyword: "WhatsApp : ",
-      value: "+91 9442212906",
-      link: "https://wa.me/+919442212906",
+      link: "https://x.com/sanjayb58109784",
     ),
   ];
 }
