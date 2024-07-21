@@ -2,8 +2,7 @@ name: Perform CD
 
 on:
   push:
-    tags:
-      - '*'
+    branches: [dev]
 
 jobs:
   continuous_deployment:
