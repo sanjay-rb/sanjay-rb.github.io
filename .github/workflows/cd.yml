@@ -1,0 +1,91 @@
+name: Perform CD
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  continuous_deployment:
+    name: Continuous Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.12.1
+        
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: "11.x"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: ${{ vars.FLUTTER_VERSION }}
+          channel: "stable"
+
+      - name: Get Flutter Dependancy
+        run: flutter pub get
+      
+      - name: Build Android App
+        run: flutter build web --release
+      
+      - name: Zip Web
+        run: |
+          cd build
+          rm -rf web.zip
+          zip -r web.zip web
+      
+      - name: Upload apk to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: build/web.zip
+          overwrite: true
+
+  notification_success:
+    if: success()
+    needs: [continuous_deployment]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Success Telegram Message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Continuous Deployment Completed Successfully!!!
+
+            User: ${{ github.actor }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+      - name: Clean Workspace
+        uses: AutoModality/action-clean@v1.1.0
+
+  notification_failure:
+    if: failure()
+    needs: [continuous_deployment]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Failure Telegram Message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Continuous Deployment Failed!!!
+
+            User: ${{ github.actor }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+      
+      - name: Clean Workspace
+        uses: AutoModality/action-clean@v1.1.0
