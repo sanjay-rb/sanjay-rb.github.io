@@ -3,6 +3,22 @@ import 'package:sanjayrb/app/data/models/timeline_model.dart';
 
 List<TimelineModel> project = [
   TimelineModel(
+    title: "100 Days of Programming",
+    subTitle: "Version : 1.4.0+3",
+    date: DateTime(2024, 07, 21),
+    type: TimelineTypeConstant.project,
+    isLive: true,
+    link:
+        "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_programming",
+    points: [
+      '100 days, 100 unique programs to code in any language of your choice. 🖥️',
+      'This app offers both light and dark mode themes. 🌞🌜',
+      'Personalized tracking of task completion with submissions via GitHub and LinkedIn posts. 📊',
+      'Maintain your streak and stand out. 🌟',
+      'By sharing task completions, you can network on LinkedIn and document your progress on GitHub. 🤝📚'
+    ],
+  ),
+  TimelineModel(
     title: "100 Days of Flutter",
     subTitle: "Version : (5) 1.2.7",
     date: DateTime(2021, 02, 17),

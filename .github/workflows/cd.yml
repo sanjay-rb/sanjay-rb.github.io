@@ -55,13 +55,6 @@ jobs:
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-      - name: Upload apk to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/web.zip
-          overwrite: true
 
   notification_success:
     if: success()
