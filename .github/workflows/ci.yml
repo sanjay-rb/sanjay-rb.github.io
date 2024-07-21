@@ -26,7 +26,7 @@ jobs:
           git status
           git add --all
           git status
-          git commit "Added test file"
+          git commit -m "Added test file"
           git push orgin main 
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
