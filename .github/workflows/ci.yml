@@ -14,87 +14,71 @@ jobs:
         
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
         with:
-          ref: main
+          java-version: "11.x"
 
-      - name: Zip Web
-        run: |
-          git branch
-          git checkout main
-          ls
-          echo "test" > test.txt
-          git status
-          git add --all
-          git status
-          git commit -m "Added test file"
-          git push orgin main 
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: ${{ vars.FLUTTER_VERSION }}
+          channel: "stable"
 
-  #     - name: Setup Java
-  #       uses: actions/setup-java@v1
-  #       with:
-  #         java-version: "11.x"
+      - name: Get Flutter Dependancy
+        run: flutter pub get
 
-  #     - name: Setup Flutter
-  #       uses: subosito/flutter-action@v1
-  #       with:
-  #         flutter-version: ${{ vars.FLUTTER_VERSION }}
-  #         channel: "stable"
+      - name: Check Code Format
+        run: dart format . --set-exit-if-changed
 
-  #     - name: Get Flutter Dependancy
-  #       run: flutter pub get
-
-  #     - name: Check Code Format
-  #       run: dart format . --set-exit-if-changed
-
-  #     - name: Analyze Code
-  #       run: dart analyze .
+      - name: Analyze Code
+        run: dart analyze .
       
-  #     - name: Testing Build Android App
-  #       run: flutter build web --release
+      - name: Testing Build Android App
+        run: flutter build web --release
 
-  # notification_success:
-  #   if: success()
-  #   needs: [continuous_integration]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Send Success Telegram Message
-  #       uses: appleboy/telegram-action@master
-  #       with:
-  #         to: ${{ secrets.TELEGRAM_TO }}
-  #         token: ${{ secrets.TELEGRAM_TOKEN }}
-  #         message: |
-  #           Continuous Integration Completed Successfully!!!
+  notification_success:
+    if: success()
+    needs: [continuous_integration]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Success Telegram Message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Continuous Integration Completed Successfully!!!
 
-  #           User: ${{ github.actor }}
+            User: ${{ github.actor }}
 
-  #           Repository: ${{ github.repository }}
+            Repository: ${{ github.repository }}
 
-  #           See changes: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}
+            See changes: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}
       
-  #     - name: Clean Workspace
-  #       uses: AutoModality/action-clean@v1.1.0
+      - name: Clean Workspace
+        uses: AutoModality/action-clean@v1.1.0
           
-  # notification_failure:
-  #   if: failure()
-  #   needs: [continuous_integration]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Send Failure Telegram Message
-  #       uses: appleboy/telegram-action@master
-  #       with:
-  #         to: ${{ secrets.TELEGRAM_TO }}
-  #         token: ${{ secrets.TELEGRAM_TOKEN }}
-  #         message: |
-  #           Continuous Integration Failed!!!
+  notification_failure:
+    if: failure()
+    needs: [continuous_integration]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Failure Telegram Message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Continuous Integration Failed!!!
 
-  #           User: ${{ github.actor }}
+            User: ${{ github.actor }}
 
-  #           Repository: ${{ github.repository }}
+            Repository: ${{ github.repository }}
 
-  #           See changes: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}
+            See changes: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}
       
-  #     - name: Clean Workspace
-  #       uses: AutoModality/action-clean@v1.1.0
+      - name: Clean Workspace
+        uses: AutoModality/action-clean@v1.1.0
   
