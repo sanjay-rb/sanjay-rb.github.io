@@ -200,9 +200,9 @@ class HomeView extends GetView<HomeController> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: FloatingActionButton(
-              backgroundColor: Get.theme.colorScheme.secondary,
+              backgroundColor: Get.theme.colorScheme.tertiary,
               child: Icon(
-                Icons.dark_mode,
+                Get.isDarkMode ? Icons.light_mode : Icons.dark_mode,
                 color: Get.theme.colorScheme.primary,
               ),
               onPressed: () {
