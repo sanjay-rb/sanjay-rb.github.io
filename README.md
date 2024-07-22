@@ -1,16 +1,40 @@
-# sanjayrb
+# My Personal Portfolio
 
-My personal portfolio
+## Description
+This repository contains the source code for my personal portfolio website. The portfolio is designed to highlight my professional background, skills, and completed projects. It serves as an online resume and a central place to find out more about me and my work.
 
-## Getting Started
+## Table of Contents
+- [Website](#website)
+- [Specifications](#specifications)
+- [Authors](#authors)
+- [License](#license)
+- [Privacy Policy](#privacy-policy)
+- [Releases](#releases)
 
-This project is a starting point for a Flutter application.
+## Website
+Kindly refer to the following Google Play Store URL for app installation: [100 Days of Programming](https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_programming)
 
-A few resources to get you started if this is your first Flutter project:
+## Specifications
+- **Responsive Design** 📱: Optimized for various screen sizes and devices.
+- **Interactive UI** 💡: Engaging and user-friendly interface.
+- **Work Experience** 💼: Detailed description of my professional work history.
+- **Education** 🎓: Information about my educational background and qualifications.
+- **Project Showcase** 🚀: Detailed descriptions and links to my projects.
+- **Certificate Showcase** 📜: Display of earned certificates and achievements.
+- **Contact Details** 📧: Easy way to get in touch with me directly through the website.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Authors
+Designed, developed, and published by [Sanjay RB](https://sanjay-rb.github.io)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Privacy Policy
+For details regarding our privacy practices, please refer to our Privacy Policy available [PRIVACY_POLICY.md](PRIVACY_POLICY.md).
+
+## Releases
+### Version: 1.0.0+1
+- **Major**: Initial release. 🎉
+
+### Version: 2.0.0+2
+- **Major**: Revamped the entire app UI and functions for a smoother, more intuitive experience. 🚀
