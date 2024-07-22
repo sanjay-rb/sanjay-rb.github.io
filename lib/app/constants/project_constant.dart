@@ -19,6 +19,17 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
+    title: "My Personal Portfolio",
+    subTitle: "Version : 2 (2.0.0)",
+    date: DateTime(2024, 07, 20),
+    type: TimelineTypeConstant.project,
+    isLive: true,
+    link: "NA",
+    points: [
+      'Revamped the entire app UI and functions for a smoother, more intuitive experience. 🚀',
+    ],
+  ),
+  TimelineModel(
     title: "100 Days of Flutter",
     subTitle: "Version : (5) 1.2.7",
     date: DateTime(2021, 02, 17),
@@ -40,7 +51,7 @@ List<TimelineModel> project = [
     subTitle: "Version : 1 (1.0.0)",
     date: DateTime(2023, 03, 09),
     type: TimelineTypeConstant.project,
-    isLive: true,
+    isLive: false,
     link: "NA",
     points: [
       'An portfolio page for my self to know more about me',
