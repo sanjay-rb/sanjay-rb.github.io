@@ -38,7 +38,6 @@ class TimelineWidget extends GetWidget<HomeController> {
                               controller.timeline[index].link!);
                         },
                         leading: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               width: ResponsiveService.width(context, 30),
@@ -63,12 +62,15 @@ class TimelineWidget extends GetWidget<HomeController> {
                                 ),
                               ),
                             ),
-                            Text(
-                              "$day/$month/$year",
-                              style: GoogleFonts.fredoka().copyWith(
-                                fontSize: ResponsiveService.width(context, 10),
-                                color: Theme.of(context).colorScheme.tertiary,
-                                fontWeight: FontWeight.bold,
+                            Expanded(
+                              child: Text(
+                                "$day/$month/$year",
+                                style: GoogleFonts.fredoka().copyWith(
+                                  fontSize:
+                                      ResponsiveService.width(context, 10),
+                                  color: Theme.of(context).colorScheme.tertiary,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ],
@@ -101,6 +103,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 10),
                       ...List.generate(
                         controller.timeline[index].points!.length,
                         (pindex) => Padding(
@@ -131,6 +134,11 @@ class TimelineWidget extends GetWidget<HomeController> {
                             ],
                           ),
                         ),
+                      ),
+                      Divider(
+                        indent: ResponsiveService.widthRatio(context, 0.4),
+                        endIndent: ResponsiveService.widthRatio(context, 0.4),
+                        color: Theme.of(context).colorScheme.tertiary,
                       ),
                     ],
                   );
