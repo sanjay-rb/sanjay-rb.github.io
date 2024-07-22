@@ -2,23 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ThemeService {
-  // French Violet (#6A05C3)
-  static Color violetDark = const Color.fromARGB(255, 89, 37, 109);
+  // American Violet (#53118F)
+  static Color violetDark = const Color(0xff53118F);
 
-  // French Violet (#6A05C3)
-  static Color violetLight = const Color.fromARGB(255, 164, 94, 191);
+  // Dark Orchid (#933DC9)
+  static Color violetLight = const Color(0xff933DC9);
 
-  // Snow (#FFFAFA)
-  static Color white = const Color(0xffFFFAFA);
+  // Floral White (#FBFAEE)
+  static Color white = const Color(0xffFBFAEE);
 
-  // Midnight Blue (#101720)
-  static Color black = const Color(0xff101720);
-
-  // Bright Gray (#EEEEEE)
-  static Color bgGreyLight = const Color(0xffEEEEEE);
-
-  // Dark Charcoal (#333333)
-  static Color bgGreyDark = const Color(0xff333333);
+  // Raisin Black (#242424)
+  static Color black = const Color(0xff242424);
 
   static ThemeData getLightTheme(context) {
     ThemeData lightTheme = ThemeData(
@@ -31,7 +25,7 @@ class ThemeService {
             secondary: violetDark,
             tertiary: black,
           ),
-      scaffoldBackgroundColor: bgGreyLight,
+      scaffoldBackgroundColor: white,
       textTheme: GoogleFonts.fredokaTextTheme(
         Theme.of(context).textTheme,
       ),
@@ -51,7 +45,7 @@ class ThemeService {
             secondary: violetLight,
             tertiary: white,
           ),
-      scaffoldBackgroundColor: bgGreyDark,
+      scaffoldBackgroundColor: black,
       textTheme: GoogleFonts.fredokaTextTheme(
         Theme.of(context).textTheme,
       ),
