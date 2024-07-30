@@ -38,3 +38,6 @@ For details regarding our privacy practices, please refer to our Privacy Policy 
 
 ### Version: 2.0.0+2
 - **Major**: Revamped the entire app UI and functions for a smoother, more intuitive experience. 🚀
+
+### Version: 2.1.0+2
+- **Major**: Added new version of Loga Parameshwari Temple app 🎉
