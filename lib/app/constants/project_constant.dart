@@ -3,6 +3,17 @@ import 'package:sanjayrb/app/data/models/timeline_model.dart';
 
 List<TimelineModel> project = [
   TimelineModel(
+    title: "My Personal Portfolio",
+    subTitle: "Version : 2.1.0+2",
+    date: DateTime(2024, 07, 20),
+    type: TimelineTypeConstant.project,
+    isLive: true,
+    link: "NA",
+    points: [
+      'Added new version of Loga Parameshwari Temple app 🎉',
+    ],
+  ),
+  TimelineModel(
     title: "Loga Parameshwari Temple",
     subTitle: "Version : 2.13.15+24",
     date: DateTime(2024, 07, 05),
