@@ -5,7 +5,7 @@ List<TimelineModel> project = [
   TimelineModel(
     title: "My Personal Portfolio",
     subTitle: "Version : 2.1.0+2",
-    date: DateTime(2024, 07, 20),
+    date: DateTime(2024, 07, 30),
     type: TimelineTypeConstant.project,
     isLive: true,
     link: "NA",
