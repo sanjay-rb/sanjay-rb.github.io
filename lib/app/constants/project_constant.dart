@@ -3,6 +3,74 @@ import 'package:sanjayrb/app/data/models/timeline_model.dart';
 
 List<TimelineModel> project = [
   TimelineModel(
+    title: "My Personal Portfolio",
+    subTitle: "Version : 2.1.0+2",
+    date: DateTime(2024, 07, 20),
+    type: TimelineTypeConstant.project,
+    isLive: true,
+    link: "NA",
+    points: [
+      'Added new version of Loga Parameshwari Temple app 🎉',
+    ],
+  ),
+  TimelineModel(
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.13.15+24",
+    date: DateTime(2024, 07, 05),
+    type: TimelineTypeConstant.project,
+    isLive: false,
+    link:
+        "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
+    points: [
+      'Minor update: Resolved image permission issue',
+      'Minor update: Enhanced Scheduled Pooja navigator',
+      'Minor update: Improved cloud function for notification text',
+      'Minor update: Integrated AdMob for mobile advertisements',
+    ],
+  ),
+  TimelineModel(
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.13.12+23",
+    date: DateTime(2024, 06, 18),
+    type: TimelineTypeConstant.project,
+    isLive: false,
+    link:
+        "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
+    points: [
+      'Minor update: Resolved image permission issue',
+      'Minor update: Enhanced Scheduled Pooja navigator',
+      'Minor update: Improved cloud function for notification text',
+      'Minor update: Integrated AdMob for mobile advertisements',
+    ],
+  ),
+  TimelineModel(
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.13.8+22",
+    date: DateTime(2024, 06, 09),
+    type: TimelineTypeConstant.project,
+    isLive: false,
+    link:
+        "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
+    points: [
+      'Security update : Google play policy fix',
+      'Minor revision : Updated special pooja style'
+    ],
+  ),
+  TimelineModel(
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.13.7+21",
+    date: DateTime(2024, 06, 08),
+    type: TimelineTypeConstant.project,
+    isLive: false,
+    link:
+        "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
+    points: [
+      'Bug fix: Permission issue fixed on storage',
+      'Minor revision : Updated securiy update on cloud functions',
+      'Minor revision : Updated special dates logic, map click'
+    ],
+  ),
+  TimelineModel(
     title: "100 Days of Programming",
     subTitle: "Version : 1.4.0+3",
     date: DateTime(2024, 07, 21),
@@ -20,7 +88,7 @@ List<TimelineModel> project = [
   ),
   TimelineModel(
     title: "My Personal Portfolio",
-    subTitle: "Version : 2 (2.0.0)",
+    subTitle: "Version : 2.0.0+2",
     date: DateTime(2024, 07, 20),
     type: TimelineTypeConstant.project,
     isLive: true,
@@ -31,10 +99,10 @@ List<TimelineModel> project = [
   ),
   TimelineModel(
     title: "100 Days of Flutter",
-    subTitle: "Version : (5) 1.2.7",
+    subTitle: "Version : 1.2.7+5",
     date: DateTime(2021, 02, 17),
     type: TimelineTypeConstant.project,
-    isLive: true,
+    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_flutter",
     points: [
@@ -48,7 +116,7 @@ List<TimelineModel> project = [
   ),
   TimelineModel(
     title: "My Personal Portfolio",
-    subTitle: "Version : 1 (1.0.0)",
+    subTitle: "Version : 1.0.0+1",
     date: DateTime(2023, 03, 09),
     type: TimelineTypeConstant.project,
     isLive: false,
@@ -58,8 +126,8 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
-    title: "Loga Parameshwari Temple Application",
-    subTitle: "Version : (18) 2.13.1",
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.13.1+18",
     date: DateTime(2023, 03, 6),
     type: TimelineTypeConstant.project,
     isLive: true,
@@ -78,8 +146,8 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
-    title: "Loga Parameshwari Temple Application",
-    subTitle: "Version : (16) 2.5.8",
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.5.8+16",
     date: DateTime(2022, 11, 7),
     type: TimelineTypeConstant.project,
     isLive: false,
@@ -91,8 +159,8 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
-    title: "Loga Parameshwari Temple Application",
-    subTitle: "Version : (14) 2.5.4",
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.5.4+14",
     date: DateTime(2022, 05, 13),
     type: TimelineTypeConstant.project,
     isLive: false,
@@ -109,8 +177,8 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
-    title: "Loga Parameshwari Temple Application",
-    subTitle: "Version : 10 (2.0.0)",
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 2.0.0+10",
     date: DateTime(2021, 07, 15),
     type: TimelineTypeConstant.project,
     isLive: false,
@@ -125,8 +193,8 @@ List<TimelineModel> project = [
     ],
   ),
   TimelineModel(
-    title: "Loga Parameshwari Temple Application",
-    subTitle: "Version : 1 (1.0.0)",
+    title: "Loga Parameshwari Temple",
+    subTitle: "Version : 1.0.0+1",
     date: DateTime(2021, 05, 27),
     type: TimelineTypeConstant.project,
     isLive: false,
