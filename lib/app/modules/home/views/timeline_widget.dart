@@ -22,15 +22,6 @@ class TimelineWidget extends GetWidget<HomeController> {
               children: List.generate(
                 controller.timeline.length,
                 (index) {
-                  final String day = controller.timeline[index].date!.day
-                      .toString()
-                      .padLeft(2, '0');
-                  final String month = controller.timeline[index].date!.month
-                      .toString()
-                      .padLeft(2, '0');
-                  final String year = controller.timeline[index].date!.year
-                      .toString()
-                      .padLeft(4, '0');
                   return Column(
                     children: [
                       ListTile(
@@ -38,50 +29,31 @@ class TimelineWidget extends GetWidget<HomeController> {
                           await launchUrlString(
                               controller.timeline[index].link!);
                         },
-                        leading: Column(
-                          children: [
-                            Container(
-                              width: ResponsiveService.width(context, 30),
-                              height: ResponsiveService.width(context, 30),
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.secondary,
-                                borderRadius: BorderRadius.circular(
-                                  ResponsiveService.width(context, 30),
-                                ),
+                        leading: Container(
+                          width: ResponsiveService.width(context, 30),
+                          height: ResponsiveService.width(context, 30),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.secondary,
+                            borderRadius: BorderRadius.circular(
+                              ResponsiveService.width(context, 30),
+                            ),
+                          ),
+                          child: FittedBox(
+                            child: Padding(
+                              padding: EdgeInsets.all(
+                                ResponsiveService.width(context, 30 / 5),
                               ),
-                              child: FittedBox(
-                                child: Padding(
-                                  padding: EdgeInsets.all(
-                                    ResponsiveService.width(context, 30 / 5),
-                                  ),
-                                  child: Icon(
-                                    TimelineProvider.iconMap[
-                                        controller.timeline[index].type],
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                  ),
-                                ),
+                              child: Icon(
+                                TimelineProvider
+                                    .iconMap[controller.timeline[index].type],
+                                color: Theme.of(context).colorScheme.primary,
                               ),
                             ),
-                            Expanded(
-                              child: Text(
-                                "$day/$month/$year",
-                                style: GoogleFonts.fredoka().copyWith(
-                                  fontSize:
-                                      ResponsiveService.width(context, 10),
-                                  color: Theme.of(context).colorScheme.tertiary,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                         isThreeLine: true,
                         title: Text(
-                          controller.timeline[index].title! +
-                              (controller.timeline[index].isLive!
-                                  ? " (Live)"
-                                  : ""),
+                          controller.timeline[index].title!,
                           textAlign: TextAlign.start,
                           style: GoogleFonts.fredoka().copyWith(
                             fontSize: ResponsiveService.width(context, 20),
@@ -89,19 +61,36 @@ class TimelineWidget extends GetWidget<HomeController> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        subtitle: Text(
-                          controller.timeline[index].subTitle!,
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.fredoka().copyWith(
-                            fontSize: ResponsiveService.width(context, 15),
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontWeight: FontWeight.bold,
-                            decoration: controller.timeline[index].link != "NA"
-                                ? TextDecoration.underline
-                                : null,
-                            decorationColor:
-                                Theme.of(context).colorScheme.secondary,
-                          ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              controller.timeline[index].subTitle!,
+                              textAlign: TextAlign.start,
+                              style: GoogleFonts.fredoka().copyWith(
+                                fontSize: ResponsiveService.width(context, 15),
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontWeight: FontWeight.bold,
+                                decoration:
+                                    controller.timeline[index].link != "NA"
+                                        ? TextDecoration.underline
+                                        : null,
+                                decorationColor:
+                                    Theme.of(context).colorScheme.secondary,
+                              ),
+                            ),
+                            Text(
+                              "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                              textAlign: TextAlign.start,
+                              style: GoogleFonts.fredoka().copyWith(
+                                fontSize: ResponsiveService.width(context, 15),
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontWeight: FontWeight.bold,
+                                decorationColor:
+                                    Theme.of(context).colorScheme.secondary,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -112,6 +101,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                             horizontal: ResponsiveService.width(context, 15),
                           ),
                           child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -196,10 +186,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SelectableText(
-                                controller.timeline[index].title! +
-                                    (controller.timeline[index].isLive!
-                                        ? " (Live)"
-                                        : ""),
+                                controller.timeline[index].title!,
                                 textAlign: TextAlign.start,
                                 style: GoogleFonts.fredoka().copyWith(
                                   fontSize:

@@ -8,7 +8,6 @@ List<TimelineModel> education = [
     date: DateTime(2016, 07),
     endDate: DateTime(2020, 07),
     type: TimelineTypeConstant.education,
-    isLive: false,
     link: "NA",
     points: [
       'Area of Interest: Data Structures & Algorithms',
@@ -21,7 +20,6 @@ List<TimelineModel> education = [
     date: DateTime(2014, 05),
     endDate: DateTime(2016, 04),
     type: TimelineTypeConstant.education,
-    isLive: false,
     link: "NA",
     points: [
       'Area of Interest: Computer Science',
@@ -34,7 +32,6 @@ List<TimelineModel> education = [
     date: DateTime(2009, 06),
     endDate: DateTime(2014, 06),
     type: TimelineTypeConstant.education,
-    isLive: false,
     link: "NA",
     points: [
       'Area of Interest: Maths',

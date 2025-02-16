@@ -8,7 +8,6 @@ List<TimelineModel> work = [
     date: DateTime(2021, 08),
     endDate: DateTime.now(),
     type: TimelineTypeConstant.work,
-    isLive: true,
     link: "NA",
     points: [
       'DataOps Leadership: Led a team of 4 to design and implement a robust DataOps pipeline, reducing ETL/ELT delays via automation and optimizing delivery times.',
@@ -26,7 +25,6 @@ List<TimelineModel> work = [
     date: DateTime(2020, 10),
     endDate: DateTime(2021, 08),
     type: TimelineTypeConstant.work,
-    isLive: false,
     link: "NA",
     points: [
       'Deployment Automation: Automated deployment of Data Technology components using Jenkins and Groovy scripts, reducing manual efforts and increasing deployment efficiency. ',
@@ -40,7 +38,6 @@ List<TimelineModel> work = [
     date: DateTime(2020, 05),
     endDate: DateTime(2020, 10),
     type: TimelineTypeConstant.work,
-    isLive: false,
     link: "NA",
     points: [
       'Mobile App Development: Designed and developed the front end for an Airlines luggage management system using Flutter, integrating CRUD operations with a user-friendly UI.'

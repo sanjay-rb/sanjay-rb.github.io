@@ -8,7 +8,6 @@ List<TimelineModel> certificate = [
         "The BA Guide | Jeremy Aschenbrenner, Vivek & Pabitra Khattri @ Udemy",
     date: DateTime(2024, 10, 07),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://udemy-certificate.s3.amazonaws.com/pdf/UC-d685225a-a212-4931-a880-b4f08b0c12ca.pdf",
     points: [
@@ -22,7 +21,6 @@ List<TimelineModel> certificate = [
     subTitle: "David Linthicum @ LinkedIn Learning",
     date: DateTime(2023, 6, 23),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         'https://drive.google.com/file/d/1Sh6mOx22BUh2jMII6Fq3ONiCBovCjxwg/view?usp=sharing',
     points: [
@@ -36,7 +34,6 @@ List<TimelineModel> certificate = [
     subTitle: "Jose Marcial Portilla @ Udemy",
     date: DateTime(2023, 03, 30),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://udemy-certificate.s3.amazonaws.com/pdf/UC-f77aa4fa-983c-4279-8f1b-30a0f0ca8a42.pdf",
     points: [
@@ -50,7 +47,6 @@ List<TimelineModel> certificate = [
     subTitle: "Google Cloud Certified",
     date: DateTime(2023, 01, 31),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link: "https://scq.io/cCjGh22",
     points: [
       'Experienced in Cloud Solution Deployment and Management: Gained hands-on experience in deploying, monitoring, and managing enterprise solutions on Google Cloud, using both the Google Cloud Console and command-line interface for efficient platform-based tasks.',
@@ -63,7 +59,6 @@ List<TimelineModel> certificate = [
     subTitle: "Ranga Karanam @ Udemy",
     date: DateTime(2023, 01, 25),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://udemy-certificate.s3.amazonaws.com/pdf/UC-8aa20932-b7b0-4e30-a022-0bf8136f4f3c.pdf",
     points: [
@@ -77,7 +72,6 @@ List<TimelineModel> certificate = [
     subTitle: "Dave Crenshaw @ LinkedIn Learning",
     date: DateTime(2022, 9, 21),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://drive.google.com/file/d/1T7PYoIYGDwiulyqhV7K4VwSzrpUGb9xJ/view?usp=sharing",
     points: [
@@ -91,7 +85,6 @@ List<TimelineModel> certificate = [
     subTitle: "Python Institute",
     date: DateTime(2021, 06, 16),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link: "https://www.credly.com/badges/782633fa-47d2-4a8f-ad6f-8c167da44466",
     points: [
       'Mastered Core Python Concepts: Gained a strong foundation in Python, learning key concepts such as compilation vs. interpretation, Python’s structure (keywords, indentation), literals, variables, data types, and operators, forming the base for effective programming.',
@@ -104,7 +97,6 @@ List<TimelineModel> certificate = [
     subTitle: "Peter Gruenbaum @ Udemy",
     date: DateTime(2021, 06, 14),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://udemy-certificate.s3.amazonaws.com/pdf/UC-fd902054-422b-4db8-9ae5-57ca57ee896b.pdf",
     points: [
@@ -118,7 +110,6 @@ List<TimelineModel> certificate = [
     subTitle: "Codingdojo, Inc. @ Udemy",
     date: DateTime(2021, 02, 24),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "https://udemy-certificate.s3.amazonaws.com/pdf/UC-5fadd4e9-df64-43fd-bfaf-6f24294edc9b.pdf",
     points: [
@@ -132,7 +123,6 @@ List<TimelineModel> certificate = [
     subTitle: "Rafi Saar @ Udemy",
     date: DateTime(2021, 01, 25),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         "http://udemy-certificate.s3.amazonaws.com/pdf/UC-10d8b7c3-36eb-46ed-ae3a-b7ce3a98c000.pdf",
     points: [
@@ -146,7 +136,6 @@ List<TimelineModel> certificate = [
     subTitle: "Dr Gemma Leigh Roberts @ LinkedIn Learning",
     date: DateTime(2020, 10, 20),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         'https://drive.google.com/file/d/1vngcSAQSxgANYo5W_Fe1tri77vLfU7wD/view?usp=sharing',
     points: [
@@ -160,7 +149,6 @@ List<TimelineModel> certificate = [
     subTitle: "Judy Steiner-Williams @ LinkedIn Learning",
     date: DateTime(2020, 10, 15),
     type: TimelineTypeConstant.certificate,
-    isLive: false,
     link:
         'https://drive.google.com/file/d/1Dqg8Bs2fKoGb6vt_ZBD20hOGaS1OU6NE/view?usp=sharing',
     points: [
