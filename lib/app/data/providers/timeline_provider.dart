@@ -9,7 +9,7 @@ import '../models/timeline_model.dart';
 
 class TimelineProvider {
   static Map<String, IconData> iconMap = {
-    TimelineTypeConstant.all: Icons.done_all_outlined,
+    TimelineTypeConstant.all: Icons.timeline,
     TimelineTypeConstant.work: Icons.work_outline,
     TimelineTypeConstant.education: Icons.school_outlined,
     TimelineTypeConstant.project: Icons.science_outlined,

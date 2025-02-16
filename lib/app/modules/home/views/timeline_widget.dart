@@ -22,6 +22,7 @@ class TimelineWidget extends GetWidget<HomeController> {
               children: List.generate(
                 controller.timeline.length,
                 (index) {
+                  double iconSize = 40;
                   return Column(
                     children: [
                       ListTile(
@@ -30,18 +31,18 @@ class TimelineWidget extends GetWidget<HomeController> {
                               controller.timeline[index].link!);
                         },
                         leading: Container(
-                          width: ResponsiveService.width(context, 30),
-                          height: ResponsiveService.width(context, 30),
+                          width: ResponsiveService.width(context, iconSize),
+                          height: ResponsiveService.width(context, iconSize),
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.secondary,
                             borderRadius: BorderRadius.circular(
-                              ResponsiveService.width(context, 30),
+                              ResponsiveService.width(context, iconSize),
                             ),
                           ),
                           child: FittedBox(
                             child: Padding(
                               padding: EdgeInsets.all(
-                                ResponsiveService.width(context, 30 / 5),
+                                ResponsiveService.width(context, iconSize / 6),
                               ),
                               child: Icon(
                                 TimelineProvider
@@ -80,7 +81,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                               ),
                             ),
                             Text(
-                              "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                              "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Live' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
                               textAlign: TextAlign.start,
                               style: GoogleFonts.fredoka().copyWith(
                                 fontSize: ResponsiveService.width(context, 15),
@@ -147,25 +148,27 @@ class TimelineWidget extends GetWidget<HomeController> {
               children: List.generate(
                 controller.timeline.length,
                 (index) {
+                  double iconSize = 40;
                   return Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
                         padding: EdgeInsets.all(
                           ResponsiveService.width(context, 10),
                         ),
                         child: Container(
-                          width: ResponsiveService.width(context, 30),
-                          height: ResponsiveService.width(context, 30),
+                          width: ResponsiveService.width(context, iconSize),
+                          height: ResponsiveService.width(context, iconSize),
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.secondary,
                             borderRadius: BorderRadius.circular(
-                              ResponsiveService.width(context, 30),
+                              ResponsiveService.width(context, iconSize),
                             ),
                           ),
                           child: FittedBox(
                             child: Padding(
                               padding: EdgeInsets.all(
-                                ResponsiveService.width(context, 30 / 5),
+                                ResponsiveService.width(context, iconSize / 5),
                               ),
                               child: Icon(
                                 TimelineProvider
@@ -222,7 +225,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                                 ),
                               ),
                               Text(
-                                "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                                "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Live' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
                                 textAlign: TextAlign.start,
                                 style: GoogleFonts.fredoka().copyWith(
                                   fontSize:

@@ -75,30 +75,38 @@ class HomeView extends GetView<HomeController> {
                                   children: [
                                     Tooltip(
                                       message: keys[index],
-                                      child: Container(
-                                        width: ResponsiveService.width(
-                                            context, 50),
-                                        height: ResponsiveService.width(
-                                            context, 50),
-                                        decoration: BoxDecoration(
-                                          color:
-                                              Get.theme.colorScheme.secondary,
-                                          borderRadius: BorderRadius.circular(
-                                            ResponsiveService.width(
-                                                context, 50),
-                                          ),
-                                        ),
-                                        child: FittedBox(
-                                          child: Padding(
-                                            padding: EdgeInsets.all(
+                                      child: Obx(
+                                        () => Container(
+                                          width: ResponsiveService.width(
+                                              context, 50),
+                                          height: ResponsiveService.width(
+                                              context, 50),
+                                          decoration: BoxDecoration(
+                                            color: controller
+                                                        .selectedTimelineType
+                                                        .value ==
+                                                    keys[index]
+                                                ? Get
+                                                    .theme.colorScheme.secondary
+                                                : Get
+                                                    .theme.colorScheme.tertiary,
+                                            borderRadius: BorderRadius.circular(
                                               ResponsiveService.width(
-                                                  context, 50 / 5),
+                                                  context, 50),
                                             ),
-                                            child: Icon(
-                                              TimelineProvider
-                                                  .iconMap[keys[index]],
-                                              color:
-                                                  Get.theme.colorScheme.primary,
+                                          ),
+                                          child: FittedBox(
+                                            child: Padding(
+                                              padding: EdgeInsets.all(
+                                                ResponsiveService.width(
+                                                    context, 50 / 5),
+                                              ),
+                                              child: Icon(
+                                                TimelineProvider
+                                                    .iconMap[keys[index]],
+                                                color: Get
+                                                    .theme.colorScheme.primary,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -149,25 +157,34 @@ class HomeView extends GetView<HomeController> {
                                     controller
                                         .updateTimelineWithKey(keys[index]);
                                   },
-                                  child: Container(
-                                    width: ResponsiveService.width(context, 50),
-                                    height:
-                                        ResponsiveService.width(context, 50),
-                                    decoration: BoxDecoration(
-                                      color: Get.theme.colorScheme.secondary,
-                                      borderRadius: BorderRadius.circular(
-                                        ResponsiveService.width(context, 50),
-                                      ),
-                                    ),
-                                    child: FittedBox(
-                                      child: Padding(
-                                        padding: EdgeInsets.all(
-                                          ResponsiveService.width(
-                                              context, 50 / 5),
+                                  child: Obx(
+                                    () => Container(
+                                      width:
+                                          ResponsiveService.width(context, 50),
+                                      height:
+                                          ResponsiveService.width(context, 50),
+                                      decoration: BoxDecoration(
+                                        color: controller.selectedTimelineType
+                                                    .value ==
+                                                keys[index]
+                                            ? Get.theme.colorScheme.secondary
+                                            : Get.theme.colorScheme.tertiary,
+                                        borderRadius: BorderRadius.circular(
+                                          ResponsiveService.width(context, 50),
                                         ),
-                                        child: Icon(
-                                          TimelineProvider.iconMap[keys[index]],
-                                          color: Get.theme.colorScheme.primary,
+                                      ),
+                                      child: FittedBox(
+                                        child: Padding(
+                                          padding: EdgeInsets.all(
+                                            ResponsiveService.width(
+                                                context, 50 / 5),
+                                          ),
+                                          child: Icon(
+                                            TimelineProvider
+                                                .iconMap[keys[index]],
+                                            color:
+                                                Get.theme.colorScheme.primary,
+                                          ),
                                         ),
                                       ),
                                     ),
