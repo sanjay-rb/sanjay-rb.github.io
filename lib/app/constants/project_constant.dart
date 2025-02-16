@@ -5,9 +5,9 @@ List<TimelineModel> project = [
   TimelineModel(
     title: "My Personal Portfolio",
     subTitle: "Version : 2.1.3+3",
-    date: DateTime(2024, 07, 30),
+    date: DateTime(2025, 02, 16),
     type: TimelineTypeConstant.project,
-    link: "NA",
+    link: "https://sanjay-rb.github.io/",
     points: [
       '2.1.3+3: Updated content of timeline and fixed minor bugs. 🐞',
       '2.1.0+2: Added new version of Loga Parameshwari Temple app 🎉',
