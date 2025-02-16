@@ -81,7 +81,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                               ),
                             ),
                             Text(
-                              "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                              "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Live' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
                               textAlign: TextAlign.start,
                               style: GoogleFonts.fredoka().copyWith(
                                 fontSize: ResponsiveService.width(context, 15),
@@ -225,7 +225,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                                 ),
                               ),
                               Text(
-                                "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                                "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Live' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
                                 textAlign: TextAlign.start,
                                 style: GoogleFonts.fredoka().copyWith(
                                   fontSize:

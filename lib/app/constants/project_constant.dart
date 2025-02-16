@@ -6,6 +6,7 @@ List<TimelineModel> project = [
     title: "100 Days of Programming",
     subTitle: "Version : 1.4.0+3",
     date: DateTime(2024, 07, 21),
+    endDate: DateTime.now(),
     type: TimelineTypeConstant.project,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_programming",
@@ -21,6 +22,7 @@ List<TimelineModel> project = [
     title: "My Personal Portfolio",
     subTitle: "Version : 2.1.3+3",
     date: DateTime(2023, 03, 09),
+    endDate: DateTime.now(),
     type: TimelineTypeConstant.project,
     link: "https://sanjay-rb.github.io/",
     points: [
@@ -32,6 +34,7 @@ List<TimelineModel> project = [
     title: "Loga Parameshwari Temple",
     subTitle: "Version : 2.13.15+24",
     date: DateTime(2021, 05, 27),
+    endDate: DateTime.now(),
     type: TimelineTypeConstant.project,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
@@ -50,6 +53,7 @@ List<TimelineModel> project = [
     title: "100 Days of Flutter",
     subTitle: "Version : 1.2.7+5",
     date: DateTime(2021, 02, 17),
+    endDate: DateTime.now(),
     type: TimelineTypeConstant.project,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_flutter",
