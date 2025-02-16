@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:sanjayrb/app/data/providers/timeline_provider.dart';
 import 'package:sanjayrb/app/modules/home/controllers/home_controller.dart';
 import 'package:sanjayrb/app/services/responsive_service.dart';
@@ -156,34 +157,12 @@ class TimelineWidget extends GetWidget<HomeController> {
               children: List.generate(
                 controller.timeline.length,
                 (index) {
-                  final String day = controller.timeline[index].date!.day
-                      .toString()
-                      .padLeft(2, '0');
-                  final String month = controller.timeline[index].date!.month
-                      .toString()
-                      .padLeft(2, '0');
-                  final String year = controller.timeline[index].date!.year
-                      .toString()
-                      .padLeft(4, '0');
                   return Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          width: ResponsiveService.width(context, 100),
-                          child: FittedBox(
-                            child: SelectableText(
-                              "$day/$month/$year",
-                              style: GoogleFonts.fredoka().copyWith(
-                                fontSize: ResponsiveService.width(context, 20),
-                                color: Theme.of(context).colorScheme.tertiary,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+                        padding: EdgeInsets.all(
+                          ResponsiveService.width(context, 10),
                         ),
-                      ),
-                      Center(
                         child: Container(
                           width: ResponsiveService.width(context, 30),
                           height: ResponsiveService.width(context, 30),
@@ -253,6 +232,19 @@ class TimelineWidget extends GetWidget<HomeController> {
                                     decorationColor:
                                         Theme.of(context).colorScheme.secondary,
                                   ),
+                                ),
+                              ),
+                              Text(
+                                "${DateFormat.yMMM().format(controller.timeline[index].date!)} ${controller.timeline[index].endDate == null ? "" : (controller.timeline[index].endDate!.month == DateTime.now().month && controller.timeline[index].endDate!.year == DateTime.now().year) ? '- Present' : "- ${DateFormat.yMMM().format(controller.timeline[index].endDate!)}"}",
+                                textAlign: TextAlign.start,
+                                style: GoogleFonts.fredoka().copyWith(
+                                  fontSize:
+                                      ResponsiveService.width(context, 20),
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontWeight: FontWeight.bold,
+                                  decorationColor:
+                                      Theme.of(context).colorScheme.secondary,
                                 ),
                               ),
                               ...List.generate(
