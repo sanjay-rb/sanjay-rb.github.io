@@ -7,6 +7,7 @@ import 'package:sanjayrb/app/data/providers/timeline_provider.dart';
 class HomeController extends GetxController {
   ScrollController scrollController = ScrollController();
   RxList<TimelineModel> timeline = [TimelineModel()].obs;
+  RxString selectedTimelineType = TimelineTypeConstant.all.obs;
 
   @override
   void onInit() {
@@ -22,6 +23,7 @@ class HomeController extends GetxController {
   }
 
   void updateTimelineWithKey(String key) {
+    selectedTimelineType.value = key;
     timeline.value = TimelineProvider.getTimelineOfType(key);
   }
 }
