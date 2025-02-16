@@ -2,6 +2,7 @@ class TimelineModel {
   String? title;
   String? subTitle;
   DateTime? date;
+  DateTime? endDate;
   String? type;
   bool? isLive;
   String? link;
@@ -11,6 +12,7 @@ class TimelineModel {
     this.title,
     this.subTitle,
     this.date,
+    this.endDate,
     this.type,
     this.isLive,
     this.link,
@@ -21,6 +23,7 @@ class TimelineModel {
     title = json['title'];
     subTitle = json['subTitle'];
     date = json['date'];
+    endDate = json['endDate'];
     type = json['type'];
     isLive = json['isLive'];
     link = json['link'];
@@ -32,6 +35,7 @@ class TimelineModel {
     data['title'] = title;
     data['subTitle'] = subTitle;
     data['date'] = date;
+    data['endDate'] = endDate;
     data['type'] = type;
     data['isLive'] = isLive;
     data['link'] = link;

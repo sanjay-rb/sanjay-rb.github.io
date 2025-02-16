@@ -8,14 +8,14 @@ class ProfileConstant {
       link: "mailto:sanjaybabu618@gmail.com",
     ),
     ProfileModel(
-      keyword: "GitHub : ",
-      value: "sanjay-rb",
-      link: "https://github.com/sanjay-rb",
-    ),
-    ProfileModel(
       keyword: "LinkedIn : ",
       value: "sanjayrb",
       link: "https://www.linkedin.com/in/sanjayrb/",
+    ),
+    ProfileModel(
+      keyword: "GitHub : ",
+      value: "sanjay-rb",
+      link: "https://github.com/sanjay-rb",
     ),
     ProfileModel(
       keyword: "Leetcode : ",
@@ -31,21 +31,6 @@ class ProfileConstant {
       keyword: "Stack Overflow : ",
       value: "sanjay-r-b",
       link: "https://stackoverflow.com/users/8609642/sanjay-r-b",
-    ),
-    ProfileModel(
-      keyword: "Facebook : ",
-      value: "sanjayramasserybabu",
-      link: "https://www.facebook.com/sanjayramasserybabu/",
-    ),
-    ProfileModel(
-      keyword: "Instagram : ",
-      value: "sanju_sanjay_618",
-      link: "https://www.instagram.com/sanju_sanjay_618/",
-    ),
-    ProfileModel(
-      keyword: "X (Twitter) : ",
-      value: "sanjayb58109784",
-      link: "https://x.com/sanjayb58109784",
     ),
   ];
 }
