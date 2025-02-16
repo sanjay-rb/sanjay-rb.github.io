@@ -4,7 +4,6 @@ class TimelineModel {
   DateTime? date;
   DateTime? endDate;
   String? type;
-  bool? isLive;
   String? link;
   List<String>? points;
 
@@ -14,7 +13,6 @@ class TimelineModel {
     this.date,
     this.endDate,
     this.type,
-    this.isLive,
     this.link,
     this.points,
   });
@@ -25,7 +23,6 @@ class TimelineModel {
     date = json['date'];
     endDate = json['endDate'];
     type = json['type'];
-    isLive = json['isLive'];
     link = json['link'];
     points = json['points']?.cast<String>();
   }
@@ -37,7 +34,6 @@ class TimelineModel {
     data['date'] = date;
     data['endDate'] = endDate;
     data['type'] = type;
-    data['isLive'] = isLive;
     data['link'] = link;
     data['points'] = points;
     return data;

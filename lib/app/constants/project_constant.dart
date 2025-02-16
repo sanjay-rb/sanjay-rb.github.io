@@ -7,7 +7,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.1.0+2",
     date: DateTime(2024, 07, 30),
     type: TimelineTypeConstant.project,
-    isLive: true,
     link: "NA",
     points: [
       'Added new version of Loga Parameshwari Temple app 🎉',
@@ -18,7 +17,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.13.15+24",
     date: DateTime(2024, 07, 05),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -33,7 +31,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.13.12+23",
     date: DateTime(2024, 06, 18),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -48,7 +45,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.13.8+22",
     date: DateTime(2024, 06, 09),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -61,7 +57,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.13.7+21",
     date: DateTime(2024, 06, 08),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -75,7 +70,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 1.4.0+3",
     date: DateTime(2024, 07, 21),
     type: TimelineTypeConstant.project,
-    isLive: true,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_programming",
     points: [
@@ -91,7 +85,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.0.0+2",
     date: DateTime(2024, 07, 20),
     type: TimelineTypeConstant.project,
-    isLive: true,
     link: "NA",
     points: [
       'Revamped the entire app UI and functions for a smoother, more intuitive experience. 🚀',
@@ -102,7 +95,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 1.2.7+5",
     date: DateTime(2021, 02, 17),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.hundred_days_of_flutter",
     points: [
@@ -119,7 +111,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 1.0.0+1",
     date: DateTime(2023, 03, 09),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link: "NA",
     points: [
       'An portfolio page for my self to know more about me',
@@ -130,7 +121,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.13.1+18",
     date: DateTime(2023, 03, 6),
     type: TimelineTypeConstant.project,
-    isLive: true,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -150,7 +140,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.5.8+16",
     date: DateTime(2022, 11, 7),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -163,7 +152,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.5.4+14",
     date: DateTime(2022, 05, 13),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -181,7 +169,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 2.0.0+10",
     date: DateTime(2021, 07, 15),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
@@ -197,7 +184,6 @@ List<TimelineModel> project = [
     subTitle: "Version : 1.0.0+1",
     date: DateTime(2021, 05, 27),
     type: TimelineTypeConstant.project,
-    isLive: false,
     link:
         "https://play.google.com/store/apps/details?id=com.sanjoke.loga_parameshwari",
     points: [
