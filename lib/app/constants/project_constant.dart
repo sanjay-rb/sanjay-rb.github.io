@@ -4,7 +4,7 @@ import 'package:sanjayrb/app/data/models/timeline_model.dart';
 List<TimelineModel> project = [
   TimelineModel(
     title: "My Personal Portfolio",
-    subTitle: "Version : 2.1.0+2",
+    subTitle: "Version : 2.1.3+3",
     date: DateTime(2024, 07, 30),
     type: TimelineTypeConstant.project,
     link: "NA",
