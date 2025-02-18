@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -112,14 +113,19 @@ class TimelineWidget extends GetWidget<HomeController> {
                                 ),
                               ),
                               Expanded(
-                                child: SelectableText(
-                                  controller.timeline[index].points![pindex],
-                                  textAlign: TextAlign.start,
-                                  style: GoogleFonts.fredoka().copyWith(
-                                    fontSize:
-                                        ResponsiveService.width(context, 15),
-                                    color:
-                                        Theme.of(context).colorScheme.tertiary,
+                                child: MarkdownBody(
+                                  data: controller
+                                      .timeline[index].points![pindex],
+                                  styleSheet: MarkdownStyleSheet(
+                                    p: GoogleFonts.fredoka().copyWith(
+                                      fontSize: ResponsiveService.width(
+                                        context,
+                                        15,
+                                      ),
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .tertiary,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -253,16 +259,19 @@ class TimelineWidget extends GetWidget<HomeController> {
                                       ),
                                     ),
                                     Expanded(
-                                      child: SelectableText(
-                                        controller
+                                      child: MarkdownBody(
+                                        data: controller
                                             .timeline[index].points![pindex],
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: ResponsiveService.width(
-                                              context, 15),
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .tertiary,
+                                        styleSheet: MarkdownStyleSheet(
+                                          p: GoogleFonts.fredoka().copyWith(
+                                            fontSize: ResponsiveService.width(
+                                              context,
+                                              15,
+                                            ),
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .tertiary,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -272,7 +281,7 @@ class TimelineWidget extends GetWidget<HomeController> {
                             ],
                           ),
                         ),
-                      )
+                      ),
                     ],
                   );
                 },
