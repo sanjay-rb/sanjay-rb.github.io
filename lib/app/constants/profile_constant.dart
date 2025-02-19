@@ -32,5 +32,11 @@ class ProfileConstant {
       value: "sanjay-r-b",
       link: "https://stackoverflow.com/users/8609642/sanjay-r-b",
     ),
+    ProfileModel(
+      keyword: "Resume : ",
+      value: "Sanjay_RB_Resume.pdf",
+      link:
+          "https://1drv.ms/w/c/cb5bce4c4f06deb5/EV8588lccTtMtkjex3lVHnAB9vsAGjiH40es6N1LVCckZg?e=15AId3",
+    ),
   ];
 }
