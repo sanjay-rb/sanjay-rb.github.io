@@ -36,7 +36,7 @@ class ProfileConstant {
       keyword: "Resume : ",
       value: "Sanjay_RB_Resume.pdf",
       link:
-          "https://1drv.ms/w/c/cb5bce4c4f06deb5/EV8588lccTtMtkjex3lVHnAB9vsAGjiH40es6N1LVCckZg?e=15AId3",
+          "https://1drv.ms/b/c/cb5bce4c4f06deb5/EcUMmoDlhiZEg6tgIJ98nP8BFD-5cbmAInJ5EyDgUja67g?e=HfJbmV",
     ),
   ];
 }
