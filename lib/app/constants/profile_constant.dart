@@ -8,6 +8,11 @@ class ProfileConstant {
       link: "mailto:sanjaybabu618@gmail.com",
     ),
     ProfileModel(
+      keyword: "Gravatar : ",
+      value: "sanjayrb",
+      link: "https://gravatar.com/sanjayrb",
+    ),
+    ProfileModel(
       keyword: "LinkedIn : ",
       value: "sanjayrb",
       link: "https://www.linkedin.com/in/sanjayrb/",
